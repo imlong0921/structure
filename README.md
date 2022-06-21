@@ -10,14 +10,14 @@ float diemTB(CDD x){
 	return(x.math+x.physics+x.chemitry)/3;
 }
 
-void input(CDD *x){
+void input(CDD &x){
 	rewind(stdin);
 	printf("\nCode: ");
-	gets(x->code);
+	gets(x.code);
 	printf("\nFull Name: ");
-	gets(x->name);
+	gets(x.name);
 	printf("\nMath, Physics, Chemistry: ");
-	scanf("%lf %lf %lf", &x->math, &x->physics, &x->chemitry);
+	scanf("%lf %lf %lf", &x.math, &x.physics, &x.chemitry);
 }
 void output(CDD x){
 	printf("\nCode: %s",x.code);
@@ -29,7 +29,7 @@ void output(CDD x){
 int main(){
 	CDD st1;
 	printf("\nPlease fill the information: ");
-	input(&st1);
+	input(st1);
 	printf("\n----- Information -----");
 	output(st1);
 }
